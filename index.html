@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Varchasav Singh — Full‑stack Developer portfolio. Projects, skills, about, and contact with a11y, theming, and smooth animations." />
+  <title>Varchasav Singh </title>
+  <link rel="stylesheet" href="main.css">
+  <!-- All element handeler style stylesheet   -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  
+</head>
+<body class="transition-colors duration-500">
+  <!-- Skip link for a11y -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black/60 text-white px-3 py-2 rounded">Skip to content</a>
+
+  <!-- Theme Toggle -->
+  <div class="fixed right-6 top-6 z-50">
+    <button id="themeToggle" class="theme-toggle p-2 rounded-full text-white shadow-lg" aria-label="Open theme picker" title="Change theme">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden" id="home">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/4 -left-20 w-96 h-96 bg-purple-900 rounded-full mix-blend-multiply blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div class="absolute top-1/2 -right-20 w-96 h-96 bg-indigo-900 rounded-full mix-blend-multiply blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      <div class="absolute top-3/4 left-1/4 w-96 h-96 bg-violet-900 rounded-full mix-blend-multiply blur-xl opacity-70 animate-blob"></div>
+    </div>
+
+    <div class="container mx-auto px-6 py-24 z-10" id="main">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="md:w-1/2 fade-in">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Varchasav Singh</span></h1>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl mb-6 slide-in-left">Creative <span class="underline decoration-wavy decoration-2 underline-offset-4 decoration-purple-400">Full‑stack Developer</span></h2>
+          <p class="text-lg md:text-xl mb-8 max-w-xl opacity-0 fade-in delay-1">I build elegant solutions to real‑world problems using thoughtful inetreactive design and clean, maintainable code.</p>
+          <div class="flex flex-wrap gap-3 opacity-0 fade-in delay-2">
+            <a href="#work" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-medium hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-400">View Work</a>
+            <a href="#contact" class="px-6 py-3 border-2 border-purple-600 rounded-full font-medium hover:bg-purple-600/10 transition-all transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-400">Contact Me</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 opacity-0 scale-up">
+          <div class="relative floating">
+            <div class="absolute -inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-75"></div>
+            <img src="pic.jpg" alt="Professional headshot of Varchasav Singh" class="relative rounded-full w-full max-w-xs border-4 border-white shadow-xl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <section id="work" class="py-20 bg-opacity-5" style="background-color: var(--card-bg)">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-16 text-center">Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Work</span></h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <article class="project-card opacity-0 fade-in delay-1 rounded-xl overflow-hidden shadow-lg bg-white/5">
+          <div class="relative overflow-hidden h-64 group">
+            <img src="unnamed.png" alt="Weather forecasting dashboard with charts and metrics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 class="text-xl font-bold text-white">Weather Forecasting Dashboard</h3>
+                <p class="text-purple-200">React, JavaScript</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">JavaScript</span>
+            </div>
+            <a href="b.txt" class="inline-flex items-center text-purple-300 hover:text-purple-100 transition-colors" aria-label="View weather dashboard case study">
+              View Case Study
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card opacity-0 fade-in delay-2 rounded-xl overflow-hidden shadow-lg bg-white/5">
+          <div class="relative overflow-hidden h-64 group">
+            <img src="p2.png" alt="ASCII game interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 class="text-xl font-bold text-white">ASCII Game</h3>
+                <p class="text-purple-200">React, JavaScript</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">ASCII</span>
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">JavaScript</span>
+            </div>
+            <a href="c.txt" class="inline-flex items-center text-purple-300 hover:text-purple-100 transition-colors" aria-label="View ASCII game case study">
+              View Case Study
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card opacity-0 fade-in delay-3 rounded-xl overflow-hidden shadow-lg bg-white/5">
+          <div class="relative overflow-hidden h-64 group">
+            <img src="han1.png" alt="Hangman game interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 class="text-xl font-bold text-white">Hangman Game</h3>
+                <p class="text-purple-200">Java, Swing, AWS</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">Java</span>
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">Swing</span>
+              <span class="px-3 py-1 bg-purple-900/40 rounded-full text-sm">AWS</span>
+            </div>
+            <a href="a.txt" class="inline-flex items-center text-purple-300 hover:text-purple-100 transition-colors" aria-label="View Hangman case study">
+              View Case Study
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-16 opacity-0 fade-in delay-4">
+        <a href="https://github.com/varchasav" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border-2 border-purple-600 rounded-full font-medium hover:bg-purple-600/10 transition-all transform hover:-translate-y-1">
+          View All Projects
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-16 text-center">My <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Skills</span></h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <!-- Skill Items -->
+        <div class="text-center opacity-0 fade-in delay-1">
+          <div class="skill-icon inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-xl mb-3 p-4 hover:bg-white/10">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.OMAdTF-qAdsRiLbGMhJw3wHaHa" alt="HTML logo" class="w-full h-full" loading="lazy" />
+          </div>
+          <h3 class="font-medium">HTML</h3>
+        </div>
+
+        <div class="text-center opacity-0 fade-in delay-2">
+          <div class="skill-icon inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-xl mb-3 p-4 hover:bg-white/10">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" class="w-full h-full" loading="lazy" />
+          </div>
+          <h3 class="font-medium">JavaScript</h3>
+        </div>
+
+        <div class="text-center opacity-0 fade-in delay-3">
+          <div class="skill-icon inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-xl mb-3 p-4 hover:bg-white/10">
+            <img src="https://rsip22.github.io/portfolio/img/Python_logo-opt.svg" alt="Python logo" class="w-full h-full" loading="lazy" />
+          </div>
+          <h3 class="font-medium">Python</h3>
+        </div>
+
+        <div class="text-center opacity-0 fade-in delay-1">
+          <div class="skill-icon inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-xl mb-3 p-4 hover:bg-white/10">
+            <img src="https://th.bing.com/th/id/OIP.eYRMf7ayTsrALuxF2II2hAHaIB" alt="Java logo" class="w-full h-full" loading="lazy" />
+          </div>
+          <h3 class="font-medium">Java</h3>
+        </div>
+
+        <div class="text-center opacity-0 fade-in delay-2">
+          <div class="skill-icon inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-xl mb-3 p-4 hover:bg-white/10">
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-tailwind-css-11492968-9325303.png" alt="Tailwind CSS logo" class="w-full h-full" loading="lazy" />
+          </div>
+          <h3 class="font-medium">Tailwind CSS</h3>
+        </div>
+
+        <div class="text-center opacity-0 fade-in delay-3">
+          <div class="skill-icon inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-xl mb-3 p-4 hover:bg-white/10">
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-mysql-3d-icon-download-in-png-blend-fbx-gltf-file-formats--database-relational-sql-coding-lang-pack-logos-icons-7578013.png" alt="MySQL logo" class="w-full h-full" loading="lazy" />
+          </div>
+          <h3 class="font-medium">MySQL</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-opacity-5" style="background-color: var(--card-bg)">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2 opacity-0 slide-in-left">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6">About <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Me</span></h2>
+          <p class="text-lg mb-6">I'm a  Student athelete and  full‑stack developer focused on building modern, fast web applications. I started coding at 16 and have been shipping projects ever since.</p>
+          <p class="text-lg mb-8">I combine solid engineering practices with a designer’s eye to craft experiences that are performant, accessible, and a joy to use.</p>
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div>
+              <h3 class="text-xl font-semibold text-purple-300">Frontend</h3>
+              <p>HTML, CSS, Tailwind</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-purple-300">Backend</h3>
+              <p>JavaScript, Java, Python, MySQL</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-purple-300">Tools</h3>
+              <p>Git, Django, Tkinter</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-purple-300">Design</h3>
+              <p>Figma, WordPress, Swing</p>
+            </div>
+          </div>
+          <a href="Varchasav_Singh_Resume.pdf" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-medium hover:from-purple-700 hover:to-indigo-700 transition-all inline-flex items-center">
+            Download Resume
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          </a>
+        </div>
+        <div class="lg:w-1/2 opacity-0 fade-in">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all">
+              <div class="text-purple-400 mb-4" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Clean Code</h3>
+              <p>Maintainable, scalable patterns and clear abstractions.</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all delay-100">
+              <div class="text-purple-400 mb-4" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Pixel‑Perfect</h3>
+              <p>Design‑accurate implementations with thoughtful micro‑interactions.</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all delay-200">
+              <div class="text-purple-400 mb-4" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Fast & Optimized</h3>
+              <p>Performance‑focused builds with minimal layout shift.</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all delay-300">
+              <div class="text-purple-400 mb-4" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Mobile‑First</h3>
+              <p>Responsive UI that looks great on any device.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-16 text-center">Get In <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Touch</span></h2>
+
+      <div class="max-w-3xl mx-auto opacity-0 fade-in">
+        <form class="space-y-6" action="#" method="POST" novalidate>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" class="contact-input w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-white/40" placeholder="e.g., Doe" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required autocomplete="email" class="contact-input w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-white/40" placeholder="@example.com" />
+            </div>
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+            <input type="text" id="subject" name="subject" class="contact-input w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-white/40" placeholder="How can I help you?" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" class="contact-input w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-white/40" placeholder="Your message here..."></textarea>
+          </div>
+          <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-medium hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:-translate-y-1">
+            Send Message
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+<footer class="py-12 bg-opacity-5" style="background-color: var(--card-bg)">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-6 md:mb-0">
+        <a href="#home" class="text-2xl font-bold">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Varchasav</span>
+          <span>Singh</span>
+        </a>
+        <p class="mt-2 text-sm opacity-70">Crafting digital experiences that matter.</p>
+      </div>
+      <div class="flex space-x-6" aria-label="Social links">
+        <!-- GitHub -->
+        <a href="https://github.com/varchasav" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-100 transition-colors duration-300" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-100 transition-colors duration-300" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/varchasav___17_04_" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-100 transition-colors duration-300" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <!-- portfolio -->
+        <a href="#" class="text-purple-300 hover:text-purple-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm2 8v8h-4v-8h4zm-2-4.5c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2z"/>
+            </svg>
+          </a>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-white/10 text-center text-sm opacity-70">
+      <p>&copy; <span id="year"></span> Varchasav Singh. All rights reserved.</p>
+    </div>
+  </div>
+  
+</footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 bg-white/10 p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-white/20" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <!-- Theme Selection Modal -->
+  <div id="themeModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center opacity-0 invisible transition-opacity duration-300">
+    <div class="bg-purple-900/90 backdrop-blur-lg rounded-xl p-8 max-w-md w-full transform scale-95 transition-transform duration-300">
+      <h3 class="text-2xl font-bold mb-6 text-center">Select Theme</h3>
+      <div class="grid grid-cols-1 gap-4">
+        <button data-theme="purple" class="theme-option flex items-center justify-between px-6 py-4 bg-purple-900 rounded-lg hover:bg-purple-800 transition-colors">
+          <span>Purple Dark</span>
+          <div class="flex space-x-2" aria-hidden="true">
+            <div class="w-6 h-6 rounded-full bg-purple-800"></div>
+            <div class="w-6 h-6 rounded-full bg-purple-600"></div>
+            <div class="w-6 h-6 rounded-full bg-purple-400"></div>
+          </div>
+        </button>
+        <button data-theme="black" class="theme-option flex items-center justify-between px-6 py-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-colors">
+          <span>Black & White</span>
+          <div class="flex space-x-2" aria-hidden="true">
+            <div class="w-6 h-6 rounded-full bg-gray-800"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-600"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-400"></div>
+          </div>
+        </button>
+        <button data-theme="white" class="theme-option flex items-center justify-between px-6 py-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors text-gray-900">
+          <span>White Dark</span>
+          <div class="flex space-x-2" aria-hidden="true">
+            <div class="w-6 h-6 rounded-full bg-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-500"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-700"></div>
+          </div>
+        </button>
+      </div>
+      <button id="closeThemeModal" class="mt-6 w-full py-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">Close</button>
+    </div>
+  </div>
+  <!-- Replace audio.mp3 with your file path/URL. "playsinline" helps iOS keep it inline. -->
+  <audio id="bg-audio" src="Punch-Deck-Code-Switch-chosic.com_.mp3" preload="auto" loop playsinline></audio>
+
+  <!-- Floating toggle button -->
+  <button id="audioBtn" class="audio-toggle" type="button" aria-pressed="false" aria-label="Toggle sound">
+    <span id="audioIcon" aria-hidden="true">
+      <!-- Unmuted icon (default) -->
+      <svg id="icon-unmuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      </svg>
+      <!-- Muted icon -->
+      <svg id="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>
+      </svg>
+    </span>
+    <span id="audioLabel">Sound On</span>
+  </button>
+
+
+  <script >//   Prevent theme FOUC: set theme class before paint 
+ (function () {
+      const t = (localStorage && localStorage.getItem('theme')) || 'purple';
+      const root = document.documentElement;
+      root.classList.add(`${t}-theme`);
+    })();
+
+    // Theme modal handlers
+    const modal = document.getElementById('themeModal');
+    const modalCard = modal.querySelector('div');
+    const themeToggleBtn = document.getElementById('themeToggle');
+
+    function showThemeModal() {
+      modal.classList.remove('invisible', 'opacity-0');
+      modalCard.classList.remove('scale-95');
+    }
+    function hideThemeModal() {
+      modal.classList.add('opacity-0', 'invisible');
+      modalCard.classList.add('scale-95');
+    }
+    themeToggleBtn.addEventListener('click', showThemeModal);
+    document.getElementById('closeThemeModal').addEventListener('click', hideThemeModal);
+
+    function applyTheme(theme) {
+      const root = document.documentElement;
+      root.classList.remove('purple-theme', 'black-theme', 'white-theme');
+      root.classList.add(`${theme}-theme`);
+      localStorage.setItem('theme', theme);
+    }
+
+    // Theme selection buttons
+    document.querySelectorAll('.theme-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.getAttribute('data-theme');
+        applyTheme(theme);
+        hideThemeModal();
+      });
+    });
+
+    // Back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('invisible', 'opacity-0');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible');
+      }
+    });
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.style.opacity = '1';
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .slide-in-left, .scale-up').forEach(el => observer.observe(el));
+
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for on‑page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || href === '#') return; // external or placeholder
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+        }
+      });
+    });
+    //audio
+(function(){
+      const audio = document.getElementById('bg-audio');
+      const btn = document.getElementById('audioBtn');
+      const iconMuted = document.getElementById('icon-muted');
+      const iconUnmuted = document.getElementById('icon-unmuted');
+      const label = document.getElementById('audioLabel');
+
+      // Restore previous user preference (if any)
+      const savedMuted = localStorage.getItem('bg-audio-muted');
+      const startMuted = savedMuted === null ? false : savedMuted === 'true';
+
+      // Some browsers block autoplay with sound until a user gesture.
+      // Strategy: try to start unmuted. If blocked, fall back to muted and cue the button.
+      function updateUI(){
+        const muted = audio.muted;
+        btn.setAttribute('aria-pressed', String(!muted));
+        iconMuted.style.display = muted ? 'inline' : 'none';
+        iconUnmuted.style.display = muted ? 'none' : 'inline';
+        label.textContent = muted ? 'Sound Off' : 'Sound On';
+      }
+
+      function persist(){
+        localStorage.setItem('bg-audio-muted', String(audio.muted));
+      }
+
+      async function primePlayback(){
+        try {
+          audio.muted = startMuted; // try honor saved state first
+          await audio.play();
+          updateUI();
+        } catch (err) {
+          // Autoplay with sound likely blocked. Start muted, prompt the user.
+          audio.muted = true;
+          try { await audio.play(); } catch(_) {}
+          btn.classList.add('pulse');
+          updateUI();
+        }
+      }
+
+      // Ensure we keep playing when tab regains visibility
+      document.addEventListener('visibilitychange', async () => {
+        if (!document.hidden && audio.paused) {
+          try { await audio.play(); } catch(_) {}
+        }
+      });
+
+      // First user gesture can safely unmute if previously blocked
+      const unlock = async () => {
+        if (audio.muted === true && (savedMuted === null || savedMuted === 'false')) {
+          audio.muted = false;
+          try { await audio.play(); } catch(_) {}
+          updateUI();
+          persist();
+        }
+        window.removeEventListener('pointerdown', unlock);
+        window.removeEventListener('keydown', unlock);
+      };
+      window.addEventListener('pointerdown', unlock, { once: true });
+      window.addEventListener('keydown', unlock, { once: true });
+
+      // Toggle via button
+      btn.addEventListener('click', async () => {
+        audio.muted = !audio.muted;
+        try { if (audio.paused) await audio.play(); } catch(_) {}
+        btn.classList.remove('pulse');
+        updateUI();
+        persist();
+      });
+
+      // Optional: set a comfortable default volume
+      audio.volume = 0.5; // 0.0 – 1.0
+
+      // Kick things off
+      primePlayback();
+    })();
+    
+
+
+</script>
+</body>
+</html>

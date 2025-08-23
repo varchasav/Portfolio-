@@ -1,0 +1,128 @@
+
+:root {
+      --transition-duration: 0.5s;
+      --easing: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+
+
+
+    /* Theme Variables */
+    .purple-theme {
+      --primary: #8b5cf6;
+      --primary-dark: #7c3aed;
+      --primary-light: #c4b5fd;
+      --bg: #111827;
+      --text: #f9fafb;
+      --card-bg: #1f2937;
+      --accent: #a78bfa;
+      --toggle-bg: #4c1d95;
+    }
+
+    .black-theme {
+      --primary: #072566;
+      --primary-dark: #000000;
+      --primary-light: #4b5563;
+      --bg: #e5e7eb;
+      --text: #111827;
+      --card-bg: #f9fafb;
+      --accent: #6b7280;
+      --toggle-bg: #1f2937;
+    }
+
+    .white-theme {
+      --primary: #f9fafb;
+      --primary-dark: #e5e7eb;
+      --primary-light: #ffffff;
+      --bg: #111827;
+      --text: #f9fafb;
+      --card-bg: #1f2937;
+      --accent: #d1d5db;
+      --toggle-bg: #6b7280;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      transition: background-color var(--transition-duration) var(--easing), color var(--transition-duration) var(--easing);
+      min-height: 100vh;
+    }
+
+    /* Keyframes */
+    @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+    @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes pulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.05) } }
+    @keyframes scaleUp { from { transform: scale(0.95); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+
+    /* Blob animation utilities used in the hero background */
+    @keyframes blob { 0%,100% { transform: translate(0, 0) scale(1) } 33% { transform: translate(20px, -30px) scale(1.05) } 66% { transform: translate(-15px, 25px) scale(0.95) } }
+    .animate-blob { animation: blob 12s infinite; will-change: transform; }
+    .animation-delay-2000 { animation-delay: 2s; }
+    .animation-delay-4000 { animation-delay: 4s; }
+
+    .fade-in { animation: fadeIn 0.6s var(--easing) forwards; }
+    .slide-in-left { animation: slideInLeft 0.6s var(--easing) forwards; }
+    .scale-up { animation: scaleUp 0.5s var(--easing) forwards; }
+    .pulse-on-hover:hover { animation: pulse 1.5s infinite; }
+    .floating { animation: float 4s ease-in-out infinite; will-change: transform; }
+    .delay-1 { animation-delay: .1s }
+    .delay-2 { animation-delay: .3s }
+    .delay-3 { animation-delay: .5s }
+    .delay-4 { animation-delay: .7s }
+
+    /* Custom Styles */
+    .theme-toggle { background-color: var(--toggle-bg); transition: all var(--transition-duration) var(--easing); }
+    .theme-toggle:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,.2); }
+
+    .nav-link { position: relative; }
+    .nav-link::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: var(--accent); transition: width var(--transition-duration) var(--easing); }
+    .nav-link:hover::after { width: 100%; }
+
+    .project-card { transition: transform var(--transition-duration) var(--easing), box-shadow var(--transition-duration) var(--easing); transform-style: preserve-3d; }
+    .project-card:hover { transform: translateY(-8px) rotateX(2deg) rotateY(2deg); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+
+    .skill-icon { transition: transform .3s var(--easing); }
+    .skill-icon:hover { transform: scale(1.12) rotate(3deg); }
+
+    .contact-input:focus { outline: none; box-shadow: 0 0 0 2px var(--accent); }
+  /* audio */
+    .audio-toggle {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.15);
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      font: 600 14px/1.1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      transition: transform .15s ease, background .2s ease;
+      z-index: 9999;
+    }
+    .audio-toggle:hover { transform: translateY(-1px); }
+    .audio-toggle:active { transform: translateY(0); }
+    .audio-toggle[aria-pressed="true"] { background: rgba(250,250,250,.95); }
+
+    /* Optional pulse to hint user action when autoplay-with-sound is blocked */
+    .pulse {
+      animation: pulse 1.2s ease-in-out 0s 3;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,0,0,.18); }
+      70% { box-shadow: 0 0 0 12px rgba(0,0,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+    }
+
+    /* Hide the native audio element but keep it in the DOM */
+    audio#bg-audio {
+      position: fixed;
+      width: 0; height: 0; opacity: 0; pointer-events: none;}

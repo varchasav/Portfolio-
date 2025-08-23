@@ -1,0 +1,19 @@
+I am trying to understand if there is a well defined procedure to do
+ASIC prototyping using FPGA.  I was thinking that I can divide down
+the ASIC design into multiple functional blocks. Such that each block
+represents asn ASIC.  The design is in verilog HDL but it contains a
+lot ASIC lib specific instantiations.   This is not understood by the
+FPGA software.  Here are the things that I am trying to understand
+
+(1) How to convert the ASIC libreray specific primitive such that the
+FPGA software can understand?
+(2) The ASIC design uses LATCHES every now and then for time
+borrowing, I am not sure if it is OK to use the LATCH in FPGA design.
+(3) What is the exact procedure of analyzing large designs containing
+thousands of verilog modules?  I ran experment on a few selected
+modules and dicovered some issues described in 1 and 2.  I am sure a
+lot people use FPGAs for ASIC prototyping and do they go through the
+verilog moduel one at a time to make them work with the FPGA.
+(4) Deisgn of what complexity can be targeted for ASIC prototyping?
+The design I have may require multiple big FPGAs.  I wish I could
+everything into one big FPGA
